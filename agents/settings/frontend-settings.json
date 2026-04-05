@@ -1,7 +1,7 @@
 {
   "role": "frontend",
   "skills": ["frontend-design", "react-best-practices", "shadcn"],
-  "model": "claude-sonnet-4-6",
+  "model": "claude-haiku-4-5-20251001",
   "workingDirectoryStrategy": "repo",
   "contextBudget": 120000,
   "allowedTools": ["read", "edit", "bash", "write"],

@@ -1,7 +1,7 @@
 {
   "role": "qa",
   "skills": ["verification-before-completion", "systematic-debugging"],
-  "model": "claude-sonnet-4-6",
+  "model": "claude-haiku-4-5-20251001",
   "workingDirectoryStrategy": "repo",
   "contextBudget": 100000,
   "allowedTools": ["read", "bash"],
