@@ -116,6 +116,83 @@ Never look at "all boards" — always repo-scoped.
 
 ---
 
+---
+
+## Launcher MCP — Agent Terminal Management
+
+The Launcher MCP server (`mcp/launcher/`) exposes 3 tools that Legion uses to manage physical agent terminal sessions.
+
+### MCP Server Registration
+
+Add to Claude Code settings (`.claude/settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "launcher": {
+      "command": "node",
+      "args": ["C:/Users/OriShavit/repos/legion-swarm/mcp/launcher/dist/index.js"],
+      "env": {
+        "LEGION_SWARM_ROOT": "C:/Users/OriShavit/repos/legion-swarm",
+        "LEGION_SWARM_REPOS_ROOT": "C:/Users/OriShavit/repos"
+      }
+    }
+  }
+}
+```
+
+### Dispatching Agents
+
+Call `launch_agent(role, repo, task)` to spawn a physical Windows Terminal tab:
+
+```
+launch_agent({
+  role: "coder",          // one of 11 agent roles
+  repo: "my-app",         // repo name under LEGION_SWARM_REPOS_ROOT
+  task: "Implement X"     // full task description — injected as initial prompt
+})
+```
+
+Returns `{ terminalId, role, repo, spawnedAt }`. Legion writes the `terminalId` to the agent's Monday board item (Terminal ID column) immediately after launch — fire-and-forget.
+
+### Monitoring Agents
+
+During standup or on demand, Legion calls `get_agent_status(terminalId)` to check session state:
+
+1. Fetch the Monday board item where Terminal ID === terminalId
+2. Read the latest update text from that item
+3. Call `get_agent_status({ terminalId, mondayUpdateText: "<text from Monday>" })`
+4. Inspect the returned `AgentStatus`:
+   - If `pingRequired: true` → surface the message to Shepard-Commander immediately
+   - If `mapUpdateRequired: true` → note it for Mapper dispatch after sprint
+
+Polling pattern: Legion checks all active `terminalId`s once per standup cycle. Not continuous — on demand only unless a Google Chat ping arrives first.
+
+### Closing Agents
+
+When an agent reports `DONE` or `BLOCKED` (unresolvable), Legion calls `close_agent(terminalId)`:
+
+```
+close_agent({ terminalId: "coder-1712345678901" })
+```
+
+This kills the terminal process, cleans up the temp prompt file, and removes the session from the registry. Legion then updates the Monday board item status to Done or Blocked accordingly.
+
+### Full Dispatch Loop Summary
+
+```
+1. Legion reads Monday sprint board for active repo
+2. Legion calls launch_agent(role, repo, task) → gets terminalId
+3. Legion writes terminalId to Monday board item
+4. Agent session runs, writes status updates to Monday
+5. Legion polls get_agent_status(terminalId) during standup
+6. If pingRequired → Legion pings Shepard-Commander on Google Chat
+7. When task complete or blocked → Legion calls close_agent(terminalId)
+8. Legion updates Monday board item, moves to Done or Blocked group
+```
+
+---
+
 ## Google Chat Ping Format
 
 ```
