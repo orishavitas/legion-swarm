@@ -1,1 +1,9 @@
-{ "role": "refactorer", "skills": ["simplify", "verification-before-completion"] }
+{
+  "role": "refactorer",
+  "skills": ["simplify", "verification-before-completion"],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 100000,
+  "allowedTools": ["read", "edit", "bash", "write"],
+  "env": {}
+}

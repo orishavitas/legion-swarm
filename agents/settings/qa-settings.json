@@ -1,1 +1,9 @@
-{ "role": "qa", "skills": ["verification-before-completion", "systematic-debugging"] }
+{
+  "role": "qa",
+  "skills": ["verification-before-completion", "systematic-debugging"],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 100000,
+  "allowedTools": ["read", "bash"],
+  "env": {}
+}

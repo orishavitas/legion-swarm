@@ -1,1 +1,9 @@
-{ "role": "coder", "skills": ["test-driven-development", "simplify", "systematic-debugging"] }
+{
+  "role": "coder",
+  "skills": ["test-driven-development", "simplify", "systematic-debugging"],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 160000,
+  "allowedTools": ["read", "edit", "bash", "write"],
+  "env": {}
+}

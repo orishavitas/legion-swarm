@@ -1,1 +1,9 @@
-{ "role": "architect", "skills": ["writing-plans", "brainstorming", "systematic-debugging"] }
+{
+  "role": "architect",
+  "skills": ["writing-plans", "brainstorming", "systematic-debugging"],
+  "model": "claude-opus-4-6",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 120000,
+  "allowedTools": ["read", "bash", "web_search"],
+  "env": {}
+}

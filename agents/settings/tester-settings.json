@@ -1,1 +1,9 @@
-{ "role": "tester", "skills": ["test-driven-development", "verification-before-completion"] }
+{
+  "role": "tester",
+  "skills": ["test-driven-development", "verification-before-completion"],
+  "model": "claude-haiku-4-5-20251001",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 80000,
+  "allowedTools": ["read", "edit", "bash", "write"],
+  "env": {}
+}

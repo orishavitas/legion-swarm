@@ -1,1 +1,9 @@
-{ "role": "documenter", "skills": ["codebase-mapping", "simplify"] }
+{
+  "role": "documenter",
+  "skills": ["codebase-mapping", "simplify"],
+  "model": "claude-haiku-4-5-20251001",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 60000,
+  "allowedTools": ["read", "edit", "write"],
+  "env": {}
+}

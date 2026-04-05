@@ -1,1 +1,9 @@
-{ "role": "reviewer", "skills": ["requesting-code-review", "receiving-code-review", "verification-before-completion"] }
+{
+  "role": "reviewer",
+  "skills": ["requesting-code-review", "receiving-code-review", "verification-before-completion"],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "repo",
+  "contextBudget": 80000,
+  "allowedTools": ["read"],
+  "env": {}
+}

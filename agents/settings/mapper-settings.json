@@ -1,1 +1,9 @@
-{ "role": "mapper", "skills": ["codebase-mapping"] }
+{
+  "role": "mapper",
+  "skills": ["codebase-mapping"],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "swarm-root",
+  "contextBudget": 80000,
+  "allowedTools": ["read", "bash"],
+  "env": {}
+}
