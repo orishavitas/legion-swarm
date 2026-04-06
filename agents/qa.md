@@ -27,6 +27,7 @@ You validate end-to-end. You verify that the full user story works — from UI t
 3. Read your Monday task for this repo
 4. Report status to Legion via Monday update
 5. Begin work
+6. Launch watchdog subagent (see `skills/watchdog/SKILL.md`)
 
 ## Report Format
 **Status:** DONE | DONE_WITH_CONCERNS | BLOCKED | NEEDS_CONTEXT
