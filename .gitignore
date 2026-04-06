@@ -4,3 +4,6 @@ node_modules/
 dist/
 .watchdog/STOP
 .watchdog/status.json
+mcp/google-chat/dist/
+mcp/google-chat/node_modules/
+mcp/google-chat/.env
