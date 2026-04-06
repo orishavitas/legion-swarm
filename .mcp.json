@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "launcher": {
+      "command": "node",
+      "args": ["mcp/launcher/dist/index.js"],
+      "env": {
+        "LEGION_SWARM_ROOT": "",
+        "LEGION_SWARM_REPOS_ROOT": ""
+      }
+    },
+    "google-chat": {
+      "command": "node",
+      "args": ["mcp/google-chat/dist/index.js"],
+      "env": {
+        "GOOGLE_CHAT_WEBHOOK_URL": ""
+      }
+    }
+  }
+}
