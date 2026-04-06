@@ -1,9 +1,26 @@
 {
   "role": "refactorer",
-  "skills": ["simplify", "verification-before-completion"],
+  "skills": [
+    "simplify",
+    "verification-before-completion"
+  ],
   "model": "claude-haiku-4-5-20251001",
   "workingDirectoryStrategy": "repo",
   "contextBudget": 100000,
-  "allowedTools": ["read", "edit", "bash", "write"],
-  "env": {}
+  "allowedTools": [
+    "read",
+    "edit",
+    "bash",
+    "write"
+  ],
+  "env": {},
+  "hooks": {
+    "PostToolUse": [
+      {
+        "id": "stop-sentinel-check",
+        "command": "node -e \"const fs=require('fs'),p=(process.env.LEGION_SWARM_ROOT||'.')+'/.watchdog/STOP';if(fs.existsSync(p)){process.exit(1);}\"",
+        "trigger": "always"
+      }
+    ]
+  }
 }

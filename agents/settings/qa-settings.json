@@ -1,9 +1,24 @@
 {
   "role": "qa",
-  "skills": ["verification-before-completion", "systematic-debugging"],
+  "skills": [
+    "verification-before-completion",
+    "systematic-debugging"
+  ],
   "model": "claude-haiku-4-5-20251001",
   "workingDirectoryStrategy": "repo",
   "contextBudget": 100000,
-  "allowedTools": ["read", "bash"],
-  "env": {}
+  "allowedTools": [
+    "read",
+    "bash"
+  ],
+  "env": {},
+  "hooks": {
+    "PostToolUse": [
+      {
+        "id": "stop-sentinel-check",
+        "command": "node -e \"const fs=require('fs'),p=(process.env.LEGION_SWARM_ROOT||'.')+'/.watchdog/STOP';if(fs.existsSync(p)){process.exit(1);}\"",
+        "trigger": "always"
+      }
+    ]
+  }
 }
