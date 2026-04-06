@@ -2,3 +2,5 @@ node_modules/
 .env
 *.log
 dist/
+.watchdog/STOP
+.watchdog/status.json
