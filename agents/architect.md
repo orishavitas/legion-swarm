@@ -36,3 +36,5 @@ You design systems. You define tech decisions, interface contracts, and structur
 **Files:** [changed files]
 **Map update needed:** YES | NO
 **Ping Shepard-Commander:** YES | NO — [reason if yes]
+
+Note: If `Ping Shepard-Commander: YES`, call `ping_shepherd` directly if the tool is in your allowed tools. Otherwise Legion handles it at the next standup sweep.
