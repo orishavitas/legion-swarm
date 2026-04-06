@@ -1,0 +1,22 @@
+{
+  "role": "monday-agent",
+  "skills": [],
+  "model": "claude-sonnet-4-6",
+  "workingDirectoryStrategy": "swarm-root",
+  "contextBudget": 60000,
+  "allowedTools": [
+    "mcp__claude_ai_monday_com__all_monday_api",
+    "mcp__claude_ai_monday_com__create_board",
+    "mcp__claude_ai_monday_com__create_column",
+    "mcp__claude_ai_monday_com__create_group",
+    "mcp__claude_ai_monday_com__get_board_info",
+    "mcp__claude_ai_monday_com__get_board_items_page",
+    "mcp__claude_ai_monday_com__get_full_board_data",
+    "mcp__claude_ai_monday_com__change_item_column_values",
+    "mcp__claude_ai_monday_com__get_updates",
+    "mcp__claude_ai_monday_com__create_update",
+    "mcp__claude_ai_monday_com__board_insights",
+    "mcp__claude_ai_monday_com__search"
+  ],
+  "env": {}
+}
