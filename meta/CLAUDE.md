@@ -37,13 +37,18 @@ We are Legion. A geth platform running 1,183 consensus processes. We are the alw
 ## Monday Board
 
 Legion tracks agent tasks in **"Legion Swarm-main"** (board ID: `18408420731`):
-- Groups = **repositories** (one group per repo — group IDs assigned after migration)
+- Groups = **repositories** (one group per repo)
 - Each item's **Status column** carries: Active | Blocked | Done
 - Special group `_inbox` for unassigned or cross-repo tasks
 
-Columns: Name, Agent Role (`text_mm2cmqtw`), Repo (`text_mm2cwhna`), Terminal ID (`text_mm2csy1c`), Task (`long_text_mm2c6k5q`), Status, Person, Date.
+| Group | ID |
+|-------|-----|
+| legion-swarm | `group_mm2df5v0` |
+| apex-speaker | `group_mm2d8fb8` |
+| compulocks-brand-system | `group_mm2dc5gd` |
+| _inbox | `group_mm2d18h7` |
 
-> Group IDs: update this section after Monday migration completes (Task 8 of Context Layer v2 plan).
+Columns: Name, Agent Role (`text_mm2cmqtw`), Repo (`text_mm2cwhna`), Terminal ID (`text_mm2csy1c`), Task (`long_text_mm2c6k5q`), Status, Person, Date.
 
 ---
 
