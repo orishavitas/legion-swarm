@@ -84,13 +84,15 @@ When dispatching an agent:
 5. Log terminal ID to Monday board item
 6. Monitor via `get_agent_status(terminalId)` — agent writes updates to Monday
 
-Agent report format expected back:
+Agent report format expected back (sign-off block):
 ```
-Status: DONE | DONE_WITH_CONCERNS | BLOCKED | NEEDS_CONTEXT
-What: [what was done]
-Files: [changed files]
-Map update needed: YES | NO
-Ping Shepard-Commander: YES | NO — [reason if yes]
+[SIGN-OFF] [role] — [repo]
+**Status:** DONE | DONE_WITH_CONCERNS | BLOCKED | NEEDS_CONTEXT
+**What:** [what was done]
+**Files:** [changed files or "none"]
+**Map update needed:** YES | NO
+**Wiki ingest needed:** YES | NO
+**Ping Shepard-Commander:** YES | NO — [reason if yes]
 ```
 
 ---
