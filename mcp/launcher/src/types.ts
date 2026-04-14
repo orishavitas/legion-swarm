@@ -35,15 +35,24 @@ export function makeTerminalID(role: AgentRole): TerminalID {
   return `${role}-${Date.now()}` as TerminalID;
 }
 
+// Sign-in status for agent session
+export type SignInStatus =
+  | "pending"       // not yet received
+  | "confirmed"     // [SIGN-IN] received, Ready: YES
+  | "failed"        // [SIGN-IN] received, Ready: NO
+  | "timeout";      // 60s elapsed, no sign-in received
+
 // Agent status returned by get_agent_status
 export interface AgentStatus {
   terminalId: TerminalID;
   role: AgentRole;
   repo: string;
+  signInStatus: SignInStatus;
   lastStatus: "pending" | "DONE" | "DONE_WITH_CONCERNS" | "BLOCKED" | "NEEDS_CONTEXT";
   lastWhat: string | null;
   pingRequired: boolean;
   mapUpdateRequired: boolean;
+  wikiIngestRequired: boolean;
   lastUpdatedAt: string | null;
 }
 
