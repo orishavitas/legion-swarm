@@ -26,6 +26,8 @@ export interface LaunchAgentResult {
   role: AgentRole;
   repo: string;
   spawnedAt: string;
+  signInStatus: "pending" | "confirmed" | "failed" | "timeout";
+  signInWarning: string | null;
 }
 
 export async function launchAgent(
@@ -112,5 +114,13 @@ export async function launchAgent(
   // Monday MCP is called by Legion, not directly from this server.
   // The terminalId is returned so Legion can write it to Monday.
 
-  return { terminalId, role, repo, spawnedAt };
+  return {
+    terminalId,
+    role,
+    repo,
+    spawnedAt,
+    signInStatus: "pending",
+    signInWarning:
+      "Agent spawned. Verify sign-in via get_agent_status(terminalId, mondayUpdateText) within 60s. If no [SIGN-IN] Monday update appears, agent may not have loaded identity/skills.",
+  };
 }

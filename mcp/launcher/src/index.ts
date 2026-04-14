@@ -81,13 +81,18 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     {
       name: "close_agent",
       description:
-        "Close a running agent terminal session. Kills the process, deletes the temp prompt file, and removes the registry entry.",
+        "Close a running agent terminal session. Pass mondayUpdateText (agent's last Monday update) to verify sign-off format before closing. Returns signOffVerified: false + warning if sign-off is missing or malformed.",
       inputSchema: {
         type: "object",
         properties: {
           terminalId: {
             type: "string",
             description: "Terminal ID returned by launch_agent",
+          },
+          mondayUpdateText: {
+            type: "string",
+            description:
+              "Optional: agent's last Monday board update text. Used to verify [SIGN-OFF] format before closing.",
           },
         },
         required: ["terminalId"],
@@ -126,10 +131,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             terminalId,
             role: "coder",
             repo: "",
+            signInStatus: "pending",
             lastStatus: "pending",
             lastWhat: null,
             pingRequired: false,
             mapUpdateRequired: false,
+            wikiIngestRequired: false,
             lastUpdatedAt: null,
           };
           return {
@@ -145,10 +152,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           terminalId,
           role: entry.role,
           repo: entry.repo,
+          signInStatus: parsed.signInStatus ?? "pending",
           lastStatus: parsed.lastStatus ?? "pending",
           lastWhat: parsed.lastWhat ?? null,
           pingRequired: parsed.pingRequired ?? false,
           mapUpdateRequired: parsed.mapUpdateRequired ?? false,
+          wikiIngestRequired: parsed.wikiIngestRequired ?? false,
           lastUpdatedAt: mondayText ? new Date().toISOString() : null,
         };
 
