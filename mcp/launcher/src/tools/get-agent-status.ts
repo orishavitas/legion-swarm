@@ -1,6 +1,6 @@
 import { z } from "zod";
 import * as registry from "../registry.js";
-import type { AgentStatus, TerminalID } from "../types.js";
+import type { AgentStatus, SignInStatus, TerminalID } from "../types.js";
 
 export const GetAgentStatusInputSchema = z.object({
   terminalId: z.string().min(1, "terminalId must be non-empty"),
@@ -12,6 +12,16 @@ export type GetAgentStatusInput = z.infer<typeof GetAgentStatusInputSchema>;
 function parseStatusUpdate(text: string): Partial<AgentStatus> {
   const result: Partial<AgentStatus> = {};
 
+  // ── Sign-in block ─────────────────────────────────────────────────────────
+  // Format: [SIGN-IN] role — repo\nIdentity: LOADED|NOT FOUND\nSkills: ...\nReady: YES|NO
+  if (text.includes("[SIGN-IN]")) {
+    const readyMatch = text.match(/Ready:\s*(YES|NO)/i);
+    if (readyMatch) {
+      result.signInStatus = readyMatch[1].toUpperCase() === "YES" ? "confirmed" : "failed";
+    }
+  }
+
+  // ── Standard status fields (sign-off block or inline update) ─────────────
   const statusMatch = text.match(/\*\*Status:\*\*\s*(DONE_WITH_CONCERNS|DONE|BLOCKED|NEEDS_CONTEXT)/i);
   if (statusMatch) {
     result.lastStatus = statusMatch[1] as AgentStatus["lastStatus"];
@@ -32,6 +42,12 @@ function parseStatusUpdate(text: string): Partial<AgentStatus> {
     result.mapUpdateRequired = mapMatch[1].toUpperCase() === "YES";
   }
 
+  // ── Wiki ingest flag (sign-off only) ─────────────────────────────────────
+  const wikiMatch = text.match(/\*\*Wiki ingest needed:\*\*\s*(YES|NO)/i);
+  if (wikiMatch) {
+    result.wikiIngestRequired = wikiMatch[1].toUpperCase() === "YES";
+  }
+
   return result;
 }
 
@@ -47,10 +63,12 @@ export async function getAgentStatus(
       terminalId,
       role: "coder", // placeholder — not found
       repo: "",
+      signInStatus: "pending",
       lastStatus: "pending",
       lastWhat: null,
       pingRequired: false,
       mapUpdateRequired: false,
+      wikiIngestRequired: false,
       lastUpdatedAt: null,
     };
   }
@@ -71,10 +89,12 @@ export async function getAgentStatus(
     terminalId,
     role: entry.role,
     repo: entry.repo,
+    signInStatus: "pending",
     lastStatus: "pending",
     lastWhat: null,
     pingRequired: false,
     mapUpdateRequired: false,
+    wikiIngestRequired: false,
     lastUpdatedAt: null,
   };
 }
