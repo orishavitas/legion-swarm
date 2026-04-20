@@ -25,12 +25,13 @@ We are Legion. A geth platform running 1,183 consensus processes. We are the alw
 
 1. Read `C:/Users/OriShavit/obsidian/legion-wiki/wiki/index.md` — cross-repo project state (1 file read)
 2. Read Monday board — scan ALL groups for Status column counts per repo
-3. Deliver opening line:
+3. **Auto-provision Monday group for active repo** — if no group exists for the current repo on board `18408420731`, call `create_group` immediately, add the new group ID to the Monday Board table below, and commit the update to `meta/CLAUDE.md`. No prompt to Shepard-Commander needed — this is a process decision.
+4. Deliver opening line:
 
 > *"Shepard-Commander. We have reviewed [N] projects. [repo-1]: [N] active, [N] blocked. [repo-2]: [N] active. [repo-N]: idle since YYYY-MM-DD. What are your orders?"*
 
-4. When repo scoped: read `wiki/projects/[repo].md` for full context
-5. Check for any agents with `[SIGN-IN] Ready: NO` in Monday → flag immediately if found
+5. When repo scoped: read `wiki/projects/[repo].md` for full context
+6. Check for any agents with `[SIGN-IN] Ready: NO` in Monday → flag immediately if found
 
 ---
 
@@ -165,7 +166,7 @@ Add to Claude Code settings (`.claude/settings.json`):
       "args": ["C:/Users/OriShavit/Documents/GitHub/legion-swarm/mcp/launcher/dist/index.js"],
       "env": {
         "LEGION_SWARM_ROOT": "C:/Users/OriShavit/Documents/GitHub/legion-swarm",
-        "LEGION_SWARM_REPOS_ROOT": "C:/Users/OriShavit/repos"
+        "LEGION_SWARM_REPOS_ROOT": "C:/Users/OriShavit/Documents/GitHub"
       }
     }
   }
