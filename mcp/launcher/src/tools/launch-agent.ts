@@ -76,7 +76,7 @@ export async function launchAgent(
   fs.writeFileSync(promptFile, prompt, "utf8");
 
   // 7. Build and spawn wt.exe command
-  // wt new-tab --title "role" --startingDirectory "workingDir" cmd /c claude --model model --print "promptFile"
+  // cmd /k keeps the terminal open after Claude exits so Shepard-Commander can follow the session
   const wtArgs = [
     "new-tab",
     "--title",
@@ -84,7 +84,7 @@ export async function launchAgent(
     "--startingDirectory",
     workingDir,
     "cmd",
-    "/c",
+    "/k",
     "claude",
     "--model",
     settings.model,
