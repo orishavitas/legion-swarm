@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_monday_com__get_user_context",
+      "mcp__claude_ai_monday_com__search",
+      "mcp__claude_ai_monday_com__create_board",
+      "mcp__claude_ai_monday_com__get_board_info",
+      "mcp__claude_ai_monday_com__create_group",
+      "mcp__claude_ai_monday_com__list_workspaces",
+      "mcp__claude_ai_monday_com__create_column",
+      "mcp__claude_ai_monday_com__all_monday_api",
+      "Bash(mkdir -p \"C:\\\\Users\\\\OriShavit\\\\Documents\\\\GitHub\\\\zen\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\OriShavit\\\\Documents\\\\GitHub\\\\zen\\\\docs\\\\specs\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\OriShavit\\\\Documents\\\\GitHub\\\\zen\\\\docs\\\\art-direction\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\OriShavit\\\\Documents\\\\GitHub\\\\zen\\\\docs\\\\mechanics\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\OriShavit\\\\Documents\\\\GitHub\\\\zen\\\\docs\\\\systems\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "launcher"
+  ]
+}
