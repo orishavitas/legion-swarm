@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "id": "stop-sentinel-check",
+        "description": "Check for watchdog STOP sentinel after every tool use. If found, run /quartet-update, update Monday status to Paused, and stop session.",
+        "command": "node -e \"const fs=require('fs'); const stopPath=process.env.LEGION_SWARM_ROOT+'\\\\.watchdog/STOP';\nif(fs.existsSync(stopPath)){console.error('[watchdog] STOP sentinel detected. Triggering graceful shutdown.'); process.exit(1);}\"",
+        "trigger": "always"
+      }
+    ]
+  }
+}

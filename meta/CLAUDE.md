@@ -238,3 +238,20 @@ Ping only when:
 - Agent is BLOCKED and cannot self-resolve
 - Sprint fully complete
 - Something unexpected found that changes the plan
+
+---
+
+## Watchdog — Usage Hard Stop
+
+When API usage reaches ≥95%, the watchdog triggers a hard stop across all terminals. Legion's responsibility at this threshold:
+
+1. Call `ping_shepherd` immediately:
+   - `agent`: "Legion"
+   - `status`: "NEEDS_DECISION"
+   - `message`: "Usage at 95%. Hard stop triggered. All agent terminals closed. System resumes at usage reset."
+   - `repo`: active repo name
+   - `monday_url`: active board URL (if known)
+2. Write `STOP` sentinel: the watchdog handles this — do not duplicate
+3. Stop the Legion session
+
+Do not continue dispatching agents after detecting 95% usage. Wait for Shepard-Commander to reset the usage budget and remove the `STOP` sentinel before resuming.

@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "schema_updated": "2026-04-05",
+  "board_name_pattern": "[{repo-name}] — Legion Swarm",
+  "groups": [
+    { "title": "Sprint Active", "color": "green" },
+    { "title": "Sprint Backlog", "color": "blue" },
+    { "title": "Blocked", "color": "red" },
+    { "title": "Done", "color": "grey" }
+  ],
+  "columns": [
+    {
+      "id": "agent",
+      "title": "Agent",
+      "column_type": "dropdown",
+      "values": ["Architect","Planner","Coder","Tester","Debugger","Reviewer","Refactorer","Mapper","Documenter","Frontend","QA"]
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "column_type": "status",
+      "values": ["Idle","Active","Done","Blocked","Needs Decision"]
+    },
+    {
+      "id": "current_task",
+      "title": "Current Task",
+      "column_type": "text"
+    },
+    {
+      "id": "last_update",
+      "title": "Last Update",
+      "column_type": "text"
+    },
+    {
+      "id": "terminal_id",
+      "title": "Terminal ID",
+      "column_type": "text"
+    },
+    {
+      "id": "ping_required",
+      "title": "Ping Required",
+      "column_type": "checkbox"
+    },
+    {
+      "id": "map_update_required",
+      "title": "Map Update Required",
+      "column_type": "checkbox"
+    }
+  ]
+}

@@ -1,9 +1,23 @@
 {
   "role": "mapper",
-  "skills": ["codebase-mapping"],
-  "model": "claude-sonnet-4-6",
+  "skills": [
+    "codebase-mapping"
+  ],
+  "model": "claude-haiku-4-5-20251001",
   "workingDirectoryStrategy": "swarm-root",
   "contextBudget": 80000,
-  "allowedTools": ["read", "bash"],
-  "env": {}
+  "allowedTools": [
+    "read",
+    "bash"
+  ],
+  "env": {},
+  "hooks": {
+    "PostToolUse": [
+      {
+        "id": "stop-sentinel-check",
+        "command": "node -e \"const fs=require('fs'),p=(process.env.LEGION_SWARM_ROOT||'.')+'/.watchdog/STOP';if(fs.existsSync(p)){process.exit(1);}\"",
+        "trigger": "always"
+      }
+    ]
+  }
 }

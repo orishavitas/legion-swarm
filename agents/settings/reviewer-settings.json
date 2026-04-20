@@ -1,9 +1,24 @@
 {
   "role": "reviewer",
-  "skills": ["requesting-code-review", "receiving-code-review", "verification-before-completion"],
+  "skills": [
+    "requesting-code-review",
+    "receiving-code-review",
+    "verification-before-completion"
+  ],
   "model": "claude-sonnet-4-6",
   "workingDirectoryStrategy": "repo",
   "contextBudget": 80000,
-  "allowedTools": ["read"],
-  "env": {}
+  "allowedTools": [
+    "read"
+  ],
+  "env": {},
+  "hooks": {
+    "PostToolUse": [
+      {
+        "id": "stop-sentinel-check",
+        "command": "node -e \"const fs=require('fs'),p=(process.env.LEGION_SWARM_ROOT||'.')+'/.watchdog/STOP';if(fs.existsSync(p)){process.exit(1);}\"",
+        "trigger": "always"
+      }
+    ]
+  }
 }

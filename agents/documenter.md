@@ -55,3 +55,5 @@ Write this as a Monday board update when task is complete or blocked. This is yo
 ```
 
 Write the sign-off BEFORE Legion calls close_agent. Legion will not close your session without verifying this format.
+
+Note: If `Ping Shepard-Commander: YES`, call `ping_shepherd` directly if the tool is in your allowed tools. Otherwise Legion handles it at the next standup sweep.

@@ -9,6 +9,8 @@ description: Generates and maintains CODEBASE_MAP.md — a token-efficient, poly
 
 This skill teaches you to generate and maintain `CODEBASE_MAP.md` — a token-efficient, language-agnostic index of a repository's structure. Any agent on the swarm reads this file to locate zones, entry points, modules, and conventions without opening a single source file. Accuracy and brevity are both required: every cell must be a short identifier or path, never prose. Mapper is the only agent that writes to this file. All others read it.
 
+The map is the single source of truth for repo structure. It is written once by Mapper, kept current after structural changes, and mirrored to Monday.com.
+
 ---
 
 ## When to Use
@@ -161,7 +163,9 @@ Agents must reproduce this format exactly. No variations in section names, colum
 | WORKER | — | cargo test | — |
 
 ## Agent Notes
-> [Mapper — YYYY-MM-DD] [note about what changed and why]
+| Date | Agent | Note |
+|------|-------|------|
+| YYYY-MM-DD | mapper | Initial map generated |
 ```
 
 ### Column Definitions
@@ -190,8 +194,9 @@ Agents must reproduce this format exactly. No variations in section names, colum
 - `Styles`: CSS approach or `—`
 
 **Agent Notes**
-- One bullet per significant structural change
-- Format: `> [Mapper — YYYY-MM-DD] [note]`
+- Append-only — never delete past entries
+- One row per significant structural change
+- Columns: Date, Agent, Note
 
 ---
 
