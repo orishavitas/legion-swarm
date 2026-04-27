@@ -4,8 +4,8 @@
       "command": "node",
       "args": ["mcp/launcher/dist/index.js"],
       "env": {
-        "LEGION_SWARM_ROOT": "",
-        "LEGION_SWARM_REPOS_ROOT": ""
+        "LEGION_SWARM_ROOT": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm",
+        "LEGION_SWARM_REPOS_ROOT": "C:\\Users\\OriShavit\\Documents\\GitHub"
       }
     },
     "google-chat": {
