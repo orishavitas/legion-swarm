@@ -55,11 +55,9 @@ Do not attempt to work around the blocker. Stop cleanly and let Legion handle it
 
 ## Completion Signal (REQUIRED)
 
-When done, update the task in the sprint file:
-```
-status: done
-```
-Commit: `chore: mark [task_id] done`
+When done:
+1. Update the task in the sprint file: `status: done`. Commit: `chore: mark [task_id] done`
+2. Update `~/obsidian/legion-wiki/wiki/projects/[repo].md` — set `sprint_status`, decrement `open_tasks`, update the Current Sprint and Open TODOs sections to reflect what you just completed. This keeps Legion's session start brief accurate without manual intervention.
 
 Your final output line must be exactly:
 ```

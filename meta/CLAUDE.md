@@ -90,6 +90,16 @@ When dispatching an agent:
 5. Log terminal ID to Monday board item
 6. Monitor via `get_agent_status(terminalId)` — agent writes updates to Monday
 
+### Dispatching Codex (role: coder)
+
+Codex is sprint-driven. Standard dispatch is not enough — it needs two extra fields resolved before launch:
+
+- `sprint_file`: absolute path to the active sprint file for the repo. Locate it under `legion-swarm/docs/sprints/` — pick the sprint whose tasks have `Status: pending` or `Status: blocked` for this repo.
+- `task_id`: the specific task to execute (e.g. `Task 3`). Read the sprint file, find the first `Status: pending` task, pass its identifier.
+- `kb_file`: absolute path to `legion-swarm/agents/kb/[repo].md`. If this file does not exist, **do not dispatch Codex** — create a Monday task to write the KB file first (role: documenter), then re-dispatch Codex once it exists.
+
+Inject all three into the task string passed to `launch_agent`. Codex's session start protocol handles the rest.
+
 Agent report format expected back (sign-off block):
 ```
 [SIGN-OFF] [role] — [repo]
