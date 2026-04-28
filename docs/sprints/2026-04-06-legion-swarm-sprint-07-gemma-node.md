@@ -47,6 +47,9 @@ No automatic classification. Agents read routing guidance from `meta/CLAUDE.md` 
 
 **Commit message:** `chore(gemma-node): record pre-flight diagnostic result`
 
+**Status:** pending
+**Blocked reason:**
+
 ---
 
 ### Task 1 — MCP server scaffold: directory, package, and tsconfig
@@ -62,6 +65,9 @@ No automatic classification. Agents read routing guidance from `meta/CLAUDE.md` 
 **Verify:** `npm install` and `npm run build` both exit 0 from within the package directory.
 
 **Commit message:** `feat(gemma-node): scaffold MCP package with TypeScript project`
+
+**Status:** pending
+**Blocked reason:**
 
 ---
 
@@ -90,6 +96,9 @@ export async function callGemma(prompt: string, context?: string): Promise<strin
 
 **Commit message:** `feat(gemma-node): add Ollama client module`
 
+**Status:** pending
+**Blocked reason:**
+
 ---
 
 ### Task 3 — MCP server: expose `gemma` tool
@@ -115,6 +124,9 @@ export async function callGemma(prompt: string, context?: string): Promise<strin
 
 **Commit message:** `feat(gemma-node): implement gemma MCP tool over stdio transport`
 
+**Status:** pending
+**Blocked reason:**
+
 ---
 
 ### Task 4 — MCP server README and agent invocation guide
@@ -134,6 +146,9 @@ export async function callGemma(prompt: string, context?: string): Promise<strin
 **Verify:** README renders correctly in GitHub Markdown preview. No orphaned headers. Start command matches `package.json` scripts.
 
 **Commit message:** `docs(gemma-node): add README with start instructions and routing summary`
+
+**Status:** pending
+**Blocked reason:**
 
 ---
 
@@ -167,6 +182,9 @@ export async function callGemma(prompt: string, context?: string): Promise<strin
 **Verify:** Poll loop in `watchdog-prompt.md` now has 3 checks in sequence: context, usage, Gemma node. Monday update logic for Gemma conditions is distinct from the existing graceful/hard-stop logic and does not interfere with it.
 
 **Commit message:** `feat(watchdog): add Gemma node health probe (GPU pressure + latency)`
+
+**Status:** pending
+**Blocked reason:**
 
 ---
 
@@ -202,6 +220,9 @@ Practical note: When in doubt, keep it with Claude. Gemma is for offloading volu
 **Verify:** Section is present, clearly separated from adjacent sections, and uses the exact routing categories from the research doc. No content from existing sections is displaced or duplicated.
 
 **Commit message:** `docs(meta): add compute routing guidance for Gemma vs Claude`
+
+**Status:** pending
+**Blocked reason:**
 
 ---
 
