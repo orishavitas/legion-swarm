@@ -2,7 +2,7 @@
 
 ## State
 Design spec for `legion-swarm-mac` approved and committed: `docs/superpowers/specs/2026-04-28-legion-swarm-mac-design.md`.
-Obsidian vault initialized at `/Users/rdhome/Documents/obsidian/legion-wiki/` with index + 4 project pages.
+Obsidian vault at `/Users/rdhome/Library/CloudStorage/GoogleDrive-ori@compulocks.com/Shared drives/R&D Department/AI Research and knowledge base/Obsidian/legion-wiki/` — on GDrive shared drive, synced cross-machine. Index + 4 project pages seeded.
 New repo `legion-swarm-mac` does NOT exist yet — implementation plan not written.
 Monday hook not yet verified. Graphify held for a later sprint.
 
@@ -13,7 +13,7 @@ Monday hook not yet verified. Graphify held for a later sprint.
 
 ## Context
 - tmux session name: `legion`. Agent windows named by terminalId (`role-8hexchars`).
-- Vault path for `.env.example`: `OBSIDIAN_VAULT=/Users/rdhome/Documents/obsidian/legion-wiki`
+- Vault path for `.env.example`: `OBSIDIAN_VAULT=/Users/rdhome/Library/CloudStorage/GoogleDrive-ori@compulocks.com/Shared drives/R&D Department/AI Research and knowledge base/Obsidian/legion-wiki`
 - Graphify (https://github.com/safishamsi/graphify) scoped for future Mapper ingest sprint — not now.
 - Nexus (project_nexus on GDrive) not integrated into legion-mac — separate effort after Nexus Phase 2-3.
 - `file-management-agent` has a `todo.review` with 30 items — paused, not abandoned.
