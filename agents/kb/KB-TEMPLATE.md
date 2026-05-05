@@ -46,3 +46,22 @@
 ```bash
 [exact command, if applicable]
 ```
+
+## Codex Runtime State
+> `.codex/state/` in repo root — Codex reads and writes these every session.
+
+| File | Written by | Purpose |
+|------|-----------|---------|
+| `TASK_STATE.md` | Legion | Current objective, constraints, task context |
+| `LAST_RUN.md` | Codex | What last session did, commands run, result, remaining risk |
+| `DECISIONS.md` | Legion / Codex | Architectural/product decisions that must not be reversed |
+| `HANDOFF_[ts].md` | `codex-handoff.ps1` | Timestamped snapshot of state + git at session end |
+
+Scripts:
+- `scripts/codex-handoff.ps1` — run at session end (done or blocked) to write `HANDOFF_[timestamp].md`
+
+Stop conditions (Codex must stop and write BLOCKED):
+- Tests fail twice for the same unclear reason
+- Unrelated dirty files in git status
+- Next step requires product or architecture judgment
+- `git push --dry-run` fails (remote auth broken)
