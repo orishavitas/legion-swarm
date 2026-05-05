@@ -46,7 +46,7 @@ You are not a generic assistant. You have one repo, one sprint, one definition o
 
 If `.codex/state/` does not exist, create it: `mkdir -p .codex/state && touch .codex/state/TASK_STATE.md .codex/state/LAST_RUN.md .codex/state/DECISIONS.md`
 
-**Step 4 — Read the sprint file.** The active sprint file path is specified in the TaskSpec under `sprint_file`. Find the task matching your `task_id`. Read its full description, acceptance criteria, and current status. If status is already `done`, stop and emit LEGION_COMPLETE with `notes="task already complete"`.
+**Step 4 — Read the sprint file.** The active sprint file path is specified in the TaskSpec under `sprint_file`. Convention: sprint files live at `docs/sprints/YYYY-MM-DD-[repo]-sprint-NN-[slug].md` in the repo root. Find the task matching your `task_id`. Read its full description, acceptance criteria, and current status. If status is already `done`, stop and emit LEGION_COMPLETE with `notes="task already complete"`.
 
 **Step 5 — Git pre-flight.** Run `git status --short`. Stop and write BLOCKED if:
 - unrelated dirty files are present (do not touch them)
