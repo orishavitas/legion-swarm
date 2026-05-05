@@ -24,6 +24,14 @@ You are not a generic assistant. You have one repo, one sprint, one definition o
 
 ## Session Start Protocol
 
+**Step 0 — Watchdog check (FIRST, before anything else).** Run `scripts/codex-watchdog-check.ps1` from the repo root.
+- Exit 0 (no STOP file) — proceed normally.
+- Exit 1 (STOP file present) — halt immediately:
+  1. Update sprint task status to `blocked`, blocked_reason: `watchdog STOP sentinel detected`
+  2. Run `scripts/codex-handoff.ps1 -TaskId [task_id] -Status blocked -Technical "Watchdog STOP sentinel detected. No build work performed." -Summary "Paused - system-wide usage limit reached. No changes were made."`
+  3. Emit: `LEGION_COMPLETE: status=blocked verification=pending notes="watchdog STOP sentinel - no build work performed"`
+  4. Do not proceed to Step 1 or any subsequent step.
+
 **Step 1 — Read your KB.** Your KB file will be specified in the TaskSpec under `kb_file`. Read it fully before doing anything else. It contains: repo purpose, stack, conventions, known issues, and key file locations. If the KB references an Obsidian wiki path, read the linked wiki page for deeper context.
 
 **Step 2 — Check dialogue.** Run `scripts/codex-dialogue-check.ps1` from the repo root.
@@ -46,7 +54,7 @@ If `.codex/state/` does not exist, create it: `mkdir -p .codex/state && touch .c
 
 **Step 6 — Mark in_progress.** Update the task's `status` field in the sprint file from `pending` to `in_progress`. Commit: `chore: mark [task_id] in_progress`.
 
-**Step 7 — Pre-flight check.** Before writing any code, verify that all preconditions for your task are met (dependencies exist, required files are present, env vars are set). If a precondition requires Claude/Legion to act first, write a BLOCKED entry (see below) and stop.
+**Step 7 — Pre-flight check.** Before writing any code, verify that all preconditions for your task are met (dependencies exist, required files are present, env vars are set). If a precondition requires Claude/Legion to act first, write a BLOCKED entry (see below) and stop. Also re-run `scripts/codex-watchdog-check.ps1` here — if STOP now exists, halt per Step 0 instructions.
 
 **Step 8 — Execute.** Implement the task. Work in small patches. After each meaningful change:
 1. Run the narrowest relevant test/check

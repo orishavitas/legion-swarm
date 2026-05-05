@@ -29,6 +29,8 @@ At session start, after reading the quartet and your Monday task:
 
 ## Responding to STOP Sentinel
 
+### Claude agents (PostToolUse hook)
+
 After **every** tool use, your PostToolUse hook checks for `.watchdog/STOP`. If found:
 
 1. Run `/quartet-update` immediately
@@ -36,6 +38,15 @@ After **every** tool use, your PostToolUse hook checks for `.watchdog/STOP`. If 
 3. Stop your session
 
 Do not continue working after detecting the STOP sentinel. Do not wait for the watchdog to contact you.
+
+### Codex agents (Step 0 check)
+
+Codex CLI does not run Claude Code hooks. Instead, Codex runs `scripts/codex-watchdog-check.ps1` as **Step 0** of its session protocol — before reading the KB, before any build work.
+
+- Exit 0 (no STOP) → proceed normally.
+- Exit 1 (STOP detected) → update sprint task to `blocked`, run `codex-handoff.ps1`, emit `LEGION_COMPLETE: status=blocked`, exit.
+
+Codex also re-checks between Steps 7 and 8 (between pre-flight and execution) to catch a STOP that arrived while Codex was reading state files.
 
 ## What You Do NOT Do
 
