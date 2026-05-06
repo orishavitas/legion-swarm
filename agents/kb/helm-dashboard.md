@@ -113,6 +113,7 @@ corepack pnpm dev
 
 ## Active Sprint
 `docs/sprints/2026-05-06-helm-dashboard-sprint-01-overlord-monitor.md`
+GitHub: https://github.com/orishavitas/helm-dashboard/blob/master/DOCS/sprints/2026-05-06-helm-dashboard-sprint-01-overlord-monitor.md
 Goal: Overlord Monitor — terminal heartbeat push endpoint, state poll endpoint, `<OverlordPanel>` widget.
 Start task: `helm-overlord-01`
 
