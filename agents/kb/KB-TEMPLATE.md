@@ -56,9 +56,10 @@
 | `LAST_RUN.md` | Codex | What last session did, commands run, result, remaining risk |
 | `DECISIONS.md` | Legion / Codex | Architectural/product decisions that must not be reversed |
 | `HANDOFF_[ts].md` | `codex-handoff.ps1` | Timestamped snapshot of state + git at session end |
+| `MONDAY_UPDATE.md` | `codex-handoff.ps1` | Dual-format `[TECHNICAL]` and `[SUMMARY]` update that Legion posts to Monday |
 
 Scripts:
-- `scripts/codex-handoff.ps1` — run at session end (done or blocked) to write `HANDOFF_[timestamp].md`
+- `scripts/codex-handoff.ps1` — run at session end (done or blocked) to write `HANDOFF_[timestamp].md` and `MONDAY_UPDATE.md`
 
 Stop conditions (Codex must stop and write BLOCKED):
 - Tests fail twice for the same unclear reason

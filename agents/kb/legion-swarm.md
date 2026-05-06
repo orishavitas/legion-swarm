@@ -94,6 +94,7 @@ python -m legion
 | `LAST_RUN.md` | Codex | What last session did, commands run, result, remaining risk. |
 | `DECISIONS.md` | Legion / Codex | Architectural/product decisions that must not be reversed. |
 | `HANDOFF_[ts].md` | `codex-handoff.ps1` | Timestamped snapshot of state and git at session end. |
+| `MONDAY_UPDATE.md` | `codex-handoff.ps1` | Dual-format `[TECHNICAL]` and `[SUMMARY]` update that Legion posts to Monday. |
 
 Stop conditions for Codex:
 - Tests fail twice for the same unclear reason.

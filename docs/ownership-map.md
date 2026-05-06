@@ -18,6 +18,22 @@
 
 ---
 
+## Contract Change Propagation
+
+Claude and Codex must be updated together whenever a change affects paths, methodology, execution plans, sprint conventions, task packets, monitor verification, vault ownership, Monday ownership, watchdog behavior, or handoff formats.
+
+| Change type | Claude-visible update | Codex-visible update |
+|---|---|---|
+| Path or repo location | `~/.claude/CLAUDE.md`, dispatch docs, sprint/task packet, vault playbook if durable | `~/.codex/AGENTS.md`, repo `AGENTS.md`, KB file, task packet |
+| Methodology or execution plan | Sprint file, plan doc, Monday update text, dispatch notes | Task packet, Codex KB, `.codex/state/TASK_STATE.md`, skill/runbook |
+| Ownership or writer rule | `docs/ownership-map.md`, dispatch docs, relevant `CLAUDE.md` | `docs/ownership-map.md`, `agents/codex.md`, relevant `AGENTS.md` |
+| Verification or monitor behavior | Nexus/Legion runbook, monitor docs, Monday status rule | Task packet verification commands, result/writeback contract |
+| Handoff or watchdog behavior | Claude watchdog/dispatch docs, Monday closeout rule | Codex scripts, `agents/codex.md`, `.codex/state` contract |
+
+If one side cannot be updated in the same pass, the current task must end with a blocker or handoff naming the unsynced source and the exact intended update. No agent should implement from stale or one-sided instructions.
+
+---
+
 ## Codex Runtime (per-repo)
 
 | Concern | Owner | Contract / Evidence |
