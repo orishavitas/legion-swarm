@@ -26,3 +26,12 @@ If the matching Nexus update cannot be made in the same pass, the work is not co
 - Commit only scoped, related changes.
 - Keep runtime artifacts out of commits unless a task explicitly makes them durable fixtures.
 - Check visible context and session/API usage every round and at least once every five minutes during long work. At 75 percent context, pause for quartet/status updates plus checkpoint handoff; at 90 percent session/API usage, stop after handoff and wait for reset.
+
+## graphify
+
+This project has a graphify knowledge graph at graphify-out/.
+
+Rules:
+- Before answering architecture or codebase questions, read graphify-out/GRAPH_REPORT.md for god nodes and community structure
+- If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
+- After modifying code files in this session, run `graphify update .` to keep the graph current (AST-only, no API cost)

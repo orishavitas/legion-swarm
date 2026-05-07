@@ -33,11 +33,14 @@ app/
     auth/[...nextauth]/route.ts
     github/repos/route.ts, install/route.ts, callback/route.ts
     vercel/projects/route.ts
+    overlord/push/route.ts, state/route.ts
   globals.css
   layout.tsx      — root layout
 
 components/
   app-shell.tsx
+  overlord-panel.tsx
+  overlord-terminal-card.tsx
   project-card.tsx
   task-list.tsx
   todo-list.tsx
@@ -47,8 +50,8 @@ components/
 
 lib/
   actions/         — server actions: projects, sprints, tasks, todos, integrations
-  data/            — read queries: projects.ts, todos.ts
-  db/              — schema split: auth-schema, product-schema, integration-schema, enums, index, schema (re-export)
+  data/            — read queries: projects.ts, todos.ts, overlord.ts
+  db/              — schema split: auth-schema, product-schema, integration-schema, overlord-schema, enums, index, schema (re-export)
   integrations/    — github.ts, vercel.ts
   security/        — encryption.ts (AES-256-GCM)
   auth.ts, session.ts, env.ts, ownership.ts, utils.ts, view-models.ts
@@ -80,14 +83,22 @@ DOCS/
 - `types/` directory exists but is empty.
 - `githubInstallationId` is not stored on `userIntegrations` during callback — verify the callback route fully persists the installation.
 - No tests exist yet — TDD from here on.
+- Overlord Monitor requires `OVERLORD_PUSH_SECRET` in the app environment and `OVERLORD_BASE_URL` for local/script pushes. The push secret must be at least 16 chars and must match the bearer token used by agent terminals.
+- Overlord migration is `drizzle/0001_overlord.sql`; apply it before expecting `/api/overlord/push` inserts or `/api/overlord/state` reads to work against Neon.
 
 ## Key Files to Know
 | File | Purpose |
 |------|---------|
 | `lib/db/product-schema.ts` | projects, sprints, tasks, todos |
 | `lib/db/integration-schema.ts` | userIntegrations, githubRepoSnapshots, vercelDeploymentSnapshots |
+| `lib/db/overlord-schema.ts` | terminal_snapshots heartbeat history table |
 | `lib/db/auth-schema.ts` | users, accounts, sessions |
 | `lib/data/projects.ts` | `getProjectSummaries()` + `getProjectDetail()` — primary read path |
+| `lib/data/overlord.ts` | `getOverlordState()` current + five-entry history per terminal |
+| `app/api/overlord/push/route.ts` | Bearer-token heartbeat insert endpoint |
+| `app/api/overlord/state/route.ts` | Authenticated dashboard polling endpoint |
+| `components/overlord-panel.tsx` | Self-contained React Query polling widget |
+| `components/overlord-terminal-card.tsx` | Terminal status card with context and history |
 | `lib/actions/integrations.ts` | save Vercel token, link GitHub/Vercel to project |
 | `lib/integrations/github.ts` | GitHub App auth, listInstallationRepos, getOpenPullRequests |
 | `lib/integrations/vercel.ts` | Vercel API calls with encrypted token |
