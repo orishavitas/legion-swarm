@@ -30,10 +30,12 @@ Failures / Blockers:
 - Existing unrelated untracked runtime files remain in the working tree and were not edited.
 
 Verification / Tests:
-- Pending final local checks after mirrored Nexus changes land.
+- Confirmed `README.md` links to the baseline contract.
+- Confirmed `docs/ownership-map.md` links to the baseline contract and names both sync trackers.
+- Confirmed Project Nexus was updated in the same local pass.
 
 Matching Repo Update Status:
-- In progress: Project Nexus tracker and baseline contract are being updated in the same local execution pass.
+- Complete locally: Project Nexus tracker, baseline contract, README, CLAUDE, and AGENTS sources were updated in the same local execution pass.
 
 ## Entry 2 - Context and Usage Watchdog Cadence
 

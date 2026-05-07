@@ -1,8 +1,9 @@
 # Legion Ownership Map
 
 > Single source of truth for who writes what. When two systems could both write to the same target, this page is the tiebreaker.
-> **Last updated:** 2026-05-05
+> **Last updated:** 2026-05-06
 > **Full contracts:** see the file references in the right column.
+> **Legion/Nexus separation baseline:** [`docs/contracts/legion-nexus-baseline.md`](contracts/legion-nexus-baseline.md)
 
 ---
 
@@ -31,6 +32,8 @@ Claude and Codex must be updated together whenever a change affects paths, metho
 | Handoff or watchdog behavior | Claude watchdog/dispatch docs, Monday closeout rule | Codex scripts, `agents/codex.md`, `.codex/state` contract |
 
 If one side cannot be updated in the same pass, the current task must end with a blocker or handoff naming the unsynced source and the exact intended update. No agent should implement from stale or one-sided instructions.
+
+For Legion/Nexus changes, also update this repo's `docs/tracking/2026-05-06-legion-nexus-sync-tracker.md` and Project Nexus' `docs/tracking/2026-05-06-nexus-legion-sync-tracker.md`.
 
 ---
 

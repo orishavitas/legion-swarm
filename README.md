@@ -23,6 +23,11 @@ Physical terminal sessions — each a full Claude Code instance
     ↓ each reads/writes Monday, pings Google Chat
 ```
 
+## Integration Contracts
+
+- **Legion/Nexus baseline:** [`docs/contracts/legion-nexus-baseline.md`](docs/contracts/legion-nexus-baseline.md) — separation of concerns, bridge rule, watchdog cadence, required cross-repo update table
+- **Ownership map:** [`docs/ownership-map.md`](docs/ownership-map.md) — who writes what, tiebreaker for Monday/vault conflicts
+
 ## Structure
 
 ```
@@ -36,6 +41,8 @@ skills/           — shared skills (codebase-mapping, etc.)
 monday/           — board templates per repo
 docs/specs/       — design specs
 docs/plans/       — sprint plans
+docs/contracts/   — baseline integration contracts
+docs/tracking/    — change, methodology, failure, verification, and test trackers
 ```
 
 ## Agent Roles
