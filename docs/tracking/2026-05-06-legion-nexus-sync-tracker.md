@@ -169,3 +169,34 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: this was a Claude/Legion dispatch-contract correction; Project Nexus packet and monitor contracts did not change.
+
+## Entry 6 - Nexus Local Proof Readiness Awareness
+
+Date: 2026-05-07
+
+Change:
+- Project Nexus local verification passed after rerunning pytest outside sandbox ACL constraints.
+
+Concept:
+- Legion can dispatch Nexus packet proof only after Nexus local monitor/startup/test readiness is green.
+
+Implementation:
+- No Legion contract changed.
+- This tracker records the Nexus verification state so Legion does not infer readiness from chat-only context.
+
+Methodology Impact:
+- The next Legion/Nexus proof should be a controlled local no-external proof before any Monday/Google Chat posting.
+- Monday closure remains a live external risk because Nexus self-test saw Monday 500 errors even though monitor verification passed.
+
+Failures / Blockers:
+- Pytest under sandbox failed due temp/cache ACL denial.
+- Nexus `monitor\self_test.py` attempted Monday updates and received Monday internal server errors.
+
+Verification / Tests:
+- Nexus py_compile passed for monitor modules.
+- Nexus startup check passed.
+- Nexus monitor self-test passed locally but logged Monday 500 errors.
+- Nexus pytest passed 19/19 outside sandbox with `-p no:cacheprovider`.
+
+Matching Repo Update Status:
+- Complete locally: Project Nexus tracker records the full command evidence.
