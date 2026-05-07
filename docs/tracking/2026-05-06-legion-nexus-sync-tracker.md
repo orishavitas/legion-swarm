@@ -67,3 +67,38 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: Project Nexus tracker and baseline contract were updated in the same local execution pass.
+
+## Entry 3 - Sprint 11.1 Handoff Smoke Proof
+
+Date: 2026-05-07
+
+Change:
+- Hardened `scripts/codex-handoff.ps1` so its read-only Git probes bypass the broken workstation global Git ignore path.
+- Ran the local Sprint 11.1 smoke proof for `HANDOFF_[timestamp].md` and `MONDAY_UPDATE.md`.
+- Removed the smoke output files after verification.
+
+Concept:
+- The Codex-to-Legion Monday update handoff must be executable, not just documented.
+- Smoke output must never remain in `.codex/state/` where Legion could mistake it for a real task update.
+
+Implementation:
+- Added `git -c core.excludesFile=` to the script's `branch`, `status`, and `log` calls.
+- This avoids the local `C:\Users\OriShavit\.config\git\ignore` permission warning that PowerShell treats as a terminating native command error under `$ErrorActionPreference = "Stop"`.
+
+Methodology Impact:
+- Sprint 11.1 proof now has local evidence that the handoff script can write both required files.
+- The script still writes to `.codex/state`; on this machine, direct Codex sandbox writes to that folder can be denied by ACLs, so the smoke proof required the approved local PowerShell execution path.
+
+Failures / Blockers:
+- First smoke run failed before writing files because Git emitted the global-ignore permission warning during `git status --short`.
+- Second smoke run failed in the sandbox because `.codex/state` has a deny-write ACL for the sandbox identity.
+- Escalated local PowerShell run succeeded.
+
+Verification / Tests:
+- PowerShell parser check passed for `scripts/codex-handoff.ps1`.
+- Smoke run wrote `.codex/state/HANDOFF_20260507_085043.md`.
+- Smoke run wrote `.codex/state/MONDAY_UPDATE.md` with `[TECHNICAL]` and `[SUMMARY]` sections.
+- Smoke files were removed after verification.
+
+Matching Repo Update Status:
+- Project Nexus does not require a contract change for this script hardening because Nexus packet closure remains monitor-owned. Project Nexus tracker records awareness only.

@@ -28,6 +28,7 @@ $Timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 $TimestampIso = Get-Date -Format "o"
 $HandoffOut = Join-Path $StateDir "HANDOFF_$Timestamp.md"
 $MondayOut = Join-Path $StateDir "MONDAY_UPDATE.md"
+$GitArgs = @("-c", "core.excludesFile=")
 
 $TaskState = if (Test-Path "$StateDir\TASK_STATE.md") {
     Get-Content "$StateDir\TASK_STATE.md" -Raw
@@ -41,17 +42,17 @@ $LastRun = if (Test-Path "$StateDir\LAST_RUN.md") {
     "Not recorded."
 }
 
-$Branch = git branch --show-current 2>$null
+$Branch = git @GitArgs branch --show-current 2>$null
 if (-not $Branch) { $Branch = "unknown" }
 
-$DirtyFiles = @(git status --short 2>$null)
+$DirtyFiles = @(git @GitArgs status --short 2>$null)
 if ($DirtyFiles.Count -eq 0) {
     $DirtyFilesText = "(clean)"
 } else {
     $DirtyFilesText = $DirtyFiles -join "`n"
 }
 
-$RecentCommits = @(git log --oneline -5 2>$null)
+$RecentCommits = @(git @GitArgs log --oneline -5 2>$null)
 if ($RecentCommits.Count -eq 0) {
     $RecentCommitsText = "(no commits)"
 } else {
