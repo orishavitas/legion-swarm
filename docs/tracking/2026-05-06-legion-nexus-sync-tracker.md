@@ -102,3 +102,36 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Project Nexus does not require a contract change for this script hardening because Nexus packet closure remains monitor-owned. Project Nexus tracker records awareness only.
+
+## Entry 4 - Sprint 11.2 Path Ambiguity Verification
+
+Date: 2026-05-07
+
+Change:
+- Verified the `project_nexus/` parent-folder ambiguity is already resolved on disk.
+- Clarified the parent `STALE.md` file with the absolute live clone path.
+
+Concept:
+- Agents must never work from `C:\Users\OriShavit\Documents\GitHub\project_nexus` directly.
+- The live Project Nexus git clone is `C:\Users\OriShavit\Documents\GitHub\project_nexus\project-nexus`.
+
+Implementation:
+- Confirmed `C:\Users\OriShavit\Documents\GitHub\project_nexus\STALE.md` exists.
+- Confirmed `agents/kb/legion-swarm.md` warns that the parent folder is stale.
+- Confirmed `~/.claude/memory/legion-swarm.md` records the canonical nested path.
+- Updated parent `STALE.md` wording for clarity. The parent folder is not the live git repo, so this is a workstation file update, not a repo commit.
+
+Methodology Impact:
+- Any future Nexus work must target the nested clone.
+- Any document or TaskSpec that points to `project_nexus/` without `project-nexus/` is suspect until verified.
+
+Failures / Blockers:
+- None.
+
+Verification / Tests:
+- `Test-Path C:\Users\OriShavit\Documents\GitHub\project_nexus\STALE.md` returned true.
+- `rg` confirmed Legion KB has the stale-parent warning.
+- `Select-String` confirmed Claude memory has the canonical nested path.
+
+Matching Repo Update Status:
+- Complete locally: Nexus live repo does not require a contract change because its own path is already the canonical target.
