@@ -135,3 +135,37 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: Nexus live repo does not require a contract change because its own path is already the canonical target.
+
+## Entry 5 - Sprint 11.3-11.6 Contract Audit
+
+Date: 2026-05-07
+
+Change:
+- Audited the remaining Sprint 11 runtime-hardening contract surfaces.
+- Fixed the last `.codex/sprints` contradiction in `C:\Users\OriShavit\.claude\docs\legion-dispatch.md`.
+
+Concept:
+- Claude dispatch, Codex runtime instructions, and Legion ownership documentation must agree before any live dispatch depends on them.
+
+Implementation:
+- Confirmed `docs/ownership-map.md` declares the Monday split: Legion writes Monday for Legion-driven items; Nexus Monitor writes Monday for Nexus packets; never both.
+- Confirmed `agents/codex.md` uses `docs/sprints/YYYY-MM-DD-[repo]-sprint-NN-[slug].md` as the sprint convention.
+- Confirmed `scripts/codex-watchdog-check.ps1` exists and parses.
+- Confirmed `agents/codex.md` Step 0 and Step 7 call the watchdog check.
+- Confirmed `~/.claude/CLAUDE.md` references `legion-swarm/docs/ownership-map.md`.
+- Updated `~/.claude/docs/legion-dispatch.md` TaskSpec template to use `docs/sprints/...` instead of `.codex/sprints/...`.
+
+Methodology Impact:
+- Sprint files now have one canonical location: `docs/sprints/` in the target repo root.
+- Claude-side dispatch now expects `MONDAY_UPDATE.md` after every `LEGION_COMPLETE`.
+
+Failures / Blockers:
+- None after the TaskSpec template contradiction was corrected.
+
+Verification / Tests:
+- `rg` confirmed no active dispatch contract still tells Claude to create sprint files under `.codex/sprints`.
+- PowerShell parser check passed for `scripts/codex-watchdog-check.ps1`.
+- `git diff --check` passed for the `.claude` dispatch doc; only line-ending warnings were reported.
+
+Matching Repo Update Status:
+- Complete locally: this was a Claude/Legion dispatch-contract correction; Project Nexus packet and monitor contracts did not change.
