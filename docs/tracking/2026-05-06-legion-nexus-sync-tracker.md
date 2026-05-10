@@ -231,3 +231,33 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: Project Nexus tracker records the script, proof evidence, and generated proof report path.
+
+## Entry 8 - Project Nexus KB Cleanup for Legion Dispatch
+
+Date: 2026-05-10
+
+Change:
+- Replaced the untracked `agents/kb/project_nexus.md` draft with a corrected ASCII KB.
+
+Concept:
+- Claude and Codex need the same canonical Project Nexus root before dispatch or review. A KB that points at the stale parent folder would recreate the path ambiguity this sprint already resolved.
+
+Implementation:
+- Set the live repo path to `C:/Users/OriShavit/Documents/GitHub/project_nexus/project-nexus`.
+- Recorded the stale parent marker, paired Legion/Nexus tracker paths, local proof script, Safe YOLO gates, and current proof baseline.
+- Removed mojibake characters from the draft so the KB is readable in terminals and Markdown tooling.
+
+Methodology Impact:
+- Legion can now use `agents/kb/project_nexus.md` as the Project Nexus startup context for Codex dispatch without sending workers to the stale parent path.
+- Any future path, methodology, execution-plan, proof-flow, or ownership-rule change must update both the Legion tracker and the Nexus tracker.
+
+Failures / Blockers:
+- The original untracked draft had stale `project_nexus` paths and encoding damage.
+- Live Monday and Google Chat proof remains gated until explicitly approved.
+
+Verification / Tests:
+- `Test-Path` confirmed Nexus live files exist under `project_nexus/project-nexus`.
+- `rg` confirmed the old draft referenced stale parent paths.
+
+Matching Repo Update Status:
+- Complete locally: Project Nexus tracker records the Legion KB cleanup.
