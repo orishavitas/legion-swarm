@@ -42,22 +42,26 @@ $LastRun = if (Test-Path "$StateDir\LAST_RUN.md") {
     "Not recorded."
 }
 
-$Branch = git @GitArgs branch --show-current 2>$null
+# Git read-only probes: use Continue so workstation warnings (permission-denied dirs,
+# unreadable global ignore) don't abort the handoff write under Stop mode.
+$ErrorActionPreference = "Continue"
+$Branch = (git @GitArgs branch --show-current 2>$null) | Select-Object -First 1
 if (-not $Branch) { $Branch = "unknown" }
 
-$DirtyFiles = @(git @GitArgs status --short 2>$null)
+$DirtyFiles = @(git @GitArgs status --short 2>$null | Where-Object { $_ -notmatch '^warning:' })
 if ($DirtyFiles.Count -eq 0) {
     $DirtyFilesText = "(clean)"
 } else {
     $DirtyFilesText = $DirtyFiles -join "`n"
 }
 
-$RecentCommits = @(git @GitArgs log --oneline -5 2>$null)
+$RecentCommits = @(git @GitArgs log --oneline -5 2>$null | Where-Object { $_ -notmatch '^warning:' })
 if ($RecentCommits.Count -eq 0) {
     $RecentCommitsText = "(no commits)"
 } else {
     $RecentCommitsText = $RecentCommits -join "`n"
 }
+$ErrorActionPreference = "Stop"
 
 @"
 # Agent Handoff - $Timestamp

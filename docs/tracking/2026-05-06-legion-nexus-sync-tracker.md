@@ -261,3 +261,37 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: Project Nexus tracker records the Legion KB cleanup.
+
+## Entry 9 - Sprint 11.1 Re-Verification: codex-handoff.ps1 Workstation Warning Fix
+
+Date: 2026-05-10
+
+Change:
+- Fixed `scripts/codex-handoff.ps1` to handle workstation git warnings that abort the script under `$ErrorActionPreference = "Stop"`.
+- Ran smoke proof from `project_nexus/project-nexus` root; both `HANDOFF_[ts].md` and `MONDAY_UPDATE.md` were created with correct content.
+- Removed smoke artifacts after verification.
+
+Concept:
+- The `.pytest-tmp-codex-run/` directory in project-nexus causes a git permission warning on this workstation. Under PowerShell's Stop error mode, that warning was treated as a terminating error before any files were written.
+
+Implementation:
+- Wrapped the three git read-only probes (`branch`, `status`, `log`) in a temporary `$ErrorActionPreference = "Continue"` block.
+- Added `Where-Object { $_ -notmatch '^warning:' }` filter on `status` and `log` output so workstation noise doesn't pollute the handoff file.
+- Restored `$ErrorActionPreference = "Stop"` after probes complete so the write phase still fails loud on real errors.
+
+Methodology Impact:
+- `codex-handoff.ps1` is now verified runnable from any repo that has workstation git warnings.
+- Sprint 11.1 is complete: file creation confirmed, smoke artifacts removed, script committed.
+
+Failures / Blockers:
+- First smoke run failed: `.pytest-tmp-codex-run/` permission warning aborted under Stop mode.
+- Fixed in-place; second smoke run succeeded.
+
+Verification / Tests:
+- PowerShell parser check: PARSE OK.
+- Smoke run wrote `HANDOFF_20260510_125319.md` with correct branch, dirty files, commits, ISO timestamp.
+- Smoke run wrote `MONDAY_UPDATE.md` with `[TECHNICAL]` and `[SUMMARY]` sections.
+- Both smoke artifacts removed; `.codex/state` directory cleaned.
+
+Matching Repo Update Status:
+- Complete locally: script fix committed to `legion-swarm`. Project Nexus has no contract change; Nexus tracker awareness added in Nexus pass.
