@@ -1,7 +1,7 @@
-# Graph Report - C:\Users\OriShavit\Documents\GitHub\legion-swarm  (2026-05-07)
+# Graph Report - C:\Users\OriShavit\Documents\GitHub\legion-swarm  (2026-05-10)
 
 ## Corpus Check
-- 14 files · ~53,766 words
+- 14 files · ~54,662 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
