@@ -1,5 +1,12 @@
 # Changelog - Legion Swarm
 
+## 2026-05-05 — Legion Nerve Center v1
+
+- Added `legion/` package: cross-repo live TUI dashboard.
+- Panels: Repo Grid (all repos, git state + Nexus harness), Activity Feed (NDJSON tail), Agent Status (Claude ctx + Codex tasks), Command Bar.
+- Read-only filesystem watcher, no network in v1.
+- Entry: `python -m legion` (config at `legion/config.json`).
+
 ## 2026-05-12
 
 ### Added

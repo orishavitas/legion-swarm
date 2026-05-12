@@ -11,5 +11,5 @@
 
 ## Next
 
-- [ ] Legion Nerve Center v1 (Sprint 08) — 8 Codex task packets ready in `.agent-harness/inbox/`, `legion/` package not yet built
+- [x] Phase 7 — Legion Nerve Center v1 (read-only TUI: repo grid + feed + agent status + command bar)
 
