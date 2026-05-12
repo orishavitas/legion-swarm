@@ -1,0 +1,8 @@
+{
+  "repos_root": "C:/Users/OriShavit/Documents/GitHub",
+  "repos": [],
+  "refresh_seconds": 30,
+  "feed_max_lines": 200,
+  "claude_state_file": "C:/Users/OriShavit/Documents/GitHub/project_nexus/project-nexus/legion/state/claude.json",
+  "editor": "code"
+}

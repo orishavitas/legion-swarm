@@ -7,3 +7,6 @@ dist/
 mcp/google-chat/dist/
 mcp/google-chat/node_modules/
 mcp/google-chat/.env
+
+# Legion Nerve Center local state
+legion/state/
