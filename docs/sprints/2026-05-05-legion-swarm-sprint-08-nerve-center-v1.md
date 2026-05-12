@@ -39,7 +39,7 @@ Branch: `task/T-20260505-nc-01-scaffold`
 
 **Commit:** `legion: scaffold package and requirements`
 
-**Status:** pending
+**Status:** done
 **Blocked reason:**
 
 ---
@@ -62,8 +62,8 @@ Dependency: Task 1 monitor countersignature.
 
 **Commit:** `legion: config loader with validation and autodiscovery`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 1 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -85,8 +85,8 @@ Dependency: Task 2 monitor countersignature.
 
 **Commit:** `legion: repo_scan probe for git + harness state`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 2 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -108,8 +108,8 @@ Dependency: Task 3 monitor countersignature.
 
 **Commit:** `legion: multi-file NDJSON tailer`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 3 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -131,8 +131,8 @@ Dependency: Task 4 monitor countersignature.
 
 **Commit:** `legion: agent_state reader for Claude + Codex`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 4 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -155,8 +155,8 @@ Dependency: Task 5 monitor countersignature.
 
 **Commit:** `legion: command actions (drop_packet, git_push, open_claude_md)`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 5 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -179,8 +179,8 @@ Dependency: Task 6 monitor countersignature.
 
 **Commit:** `legion: nerve_center TUI entry point (Rich Live + 4 panels)`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 6 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
@@ -203,8 +203,8 @@ Dependency: Task 7 monitor countersignature.
 
 **Commit:** `legion: __main__, update CHANGELOG and TODO`
 
-**Status:** blocked
-**Blocked reason:** Legion needs to countersign Task 7 before releasing this task.
+**Status:** done
+**Blocked reason:**
 
 ---
 
