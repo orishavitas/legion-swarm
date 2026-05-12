@@ -1,0 +1,24 @@
+# Changelog - Legion Swarm
+
+## 2026-05-12
+
+### Added
+- Sprint 08 Nerve Center v1: 8 task packets written to `.agent-harness/inbox/` (nc-01 through nc-08); `docs/plans/2026-05-05-legion-nerve-center.md` is the implementation plan.
+- `docs/plans/2026-05-05-legion-nerve-center-operative.md` — operative version of the plan for Codex dispatch.
+- `docs/sprints/2026-05-05-legion-swarm-sprint-08-nerve-center-v1.md` — sprint contract.
+- `docs/dialogue-format.md` — dialogue format spec for Claude/Codex cross-terminal messaging.
+- `docs/tracking/2026-05-06-legion-nexus-sync-tracker.md` — entries 1-9 recording all Legion/Nexus sync changes through 2026-05-10.
+
+### Changed
+- `TODO.md` — marked `project_nexus` group ID confirmed and template drift done; next action is Nerve Center v1.
+
+## 2026-05-07
+
+### Added
+- Restarted Project Nexus sprint cadence with `documenter-project_nexus-20260507-1`.
+- Recorded Project Nexus KB-backed dispatch state in `~/.claude/swarm-state.json`.
+- Created Nexus sprint scaffold at `project_nexus/docs/sprints/2026-05-07-template-audit.md`.
+
+### Notes
+- Monday live item creation was not performed because no Monday MCP tool or `MONDAY_*` token was available in this Codex environment. Nexus work is routed through the known `_inbox` group until a `project_nexus` group ID is confirmed.
+
