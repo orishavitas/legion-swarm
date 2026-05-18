@@ -1,5 +1,15 @@
 # Changelog - Legion Swarm
 
+## 2026-05-18
+
+### Changed
+- Committed refreshed Graphify output as `6194baa` after reviewing the hook-generated graph files.
+- Added repo-local quartet closeout notes for the Graphify push loop: `TODO.md`, `MEMORY.md`, `CHANGELOG.md`, and `CODEX_HANDOFF.md`.
+- Clarified that the default Claude/Codex sync loop is repo quartet first; Obsidian vault writeback is reserved for major phase summaries, handoff checkpoints, or explicit cross-repo knowledge.
+
+### Notes
+- The previous closeout plan referenced `00decc4`, but that commit was not present in this checkout. The actual outgoing Graphify commit is `6194baa`.
+
 ## 2026-05-05 — Legion Nerve Center v1
 
 - Added `legion/` package: cross-repo live TUI dashboard.
