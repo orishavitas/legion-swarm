@@ -1,5 +1,11 @@
 # Memory - Legion Swarm
 
+## 2026-05-18 - Monday MCP Dispatch Preflight
+
+- Added `legion/monday_preflight.py` to record Monday write-access evidence at `.codex/state/MONDAY_MCP_PREFLIGHT.md` before Legion dispatch.
+- `meta/CLAUDE.md` now gates `launch_agent`: if Monday write tools are missing or blocked, record `status: missing` with evidence and do not dispatch.
+- This does not change Nexus packet closure; Project Nexus monitor remains the Monday writer for Nexus packets.
+
 ## 2026-05-18 - Graphify Push Closeout
 
 - Graphify output was reviewed and committed as `6194baa` (`chore(graphify): update graph output`) before quartet closeout.

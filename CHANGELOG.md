@@ -3,6 +3,8 @@
 ## 2026-05-18
 
 ### Changed
+- Added `legion/monday_preflight.py` and tests for durable `.codex/state/MONDAY_MCP_PREFLIGHT.md` records.
+- Updated Legion dispatch instructions and ownership tracking so missing Monday write access is recorded before agent launch.
 - Committed refreshed Graphify output as `6194baa` after reviewing the hook-generated graph files.
 - Added repo-local quartet closeout notes for the Graphify push loop: `TODO.md`, `MEMORY.md`, `CHANGELOG.md`, and `CODEX_HANDOFF.md`.
 - Clarified that the default Claude/Codex sync loop is repo quartet first; Obsidian vault writeback is reserved for major phase summaries, handoff checkpoints, or explicit cross-repo knowledge.

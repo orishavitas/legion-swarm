@@ -86,9 +86,12 @@ When dispatching an agent:
 1. Read `legion-swarm/agents/[role].md` — inject as identity
 2. Read `legion-swarm/agents/settings/[role]-settings.json` — inject as skill loadout
 3. Pull task context from Monday board for the active repo
-4. Call `launch_agent(role, repo, task)` via Launcher MCP
-5. Log terminal ID to Monday board item
-6. Monitor via `get_agent_status(terminalId)` — agent writes updates to Monday
+4. Before `launch_agent`, record Monday write-access evidence:
+   - If Monday write tools are callable (`create_update` and `change_item_column_values`), run `python -m legion.monday_preflight --repo legion-swarm --board-id 18408420731 --status available --evidence "<tool evidence>"`.
+   - If Monday write tools are missing or blocked, run the same command with `--status missing --evidence "<blocker>"`, do not dispatch, and preserve the blocker in `.codex/state/MONDAY_MCP_PREFLIGHT.md`.
+5. Call `launch_agent(role, repo, task)` via Launcher MCP only after the preflight file exists for the active board
+6. Log terminal ID to Monday board item
+7. Monitor via `get_agent_status(terminalId)` — agent writes updates to Monday
 
 ### Dispatching Codex (role: coder)
 

@@ -9,7 +9,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\agent_state.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_legion_agent_state_py",
-      "community": 6,
+      "community": 7,
       "norm_label": "agent_state.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\agent_state.py",
       "source_location": "L15",
       "id": "agent_state_claudestate",
-      "community": 6,
+      "community": 7,
       "norm_label": "claudestate"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\agent_state.py",
       "source_location": "L24",
       "id": "agent_state_read_claude",
-      "community": 6,
+      "community": 7,
       "norm_label": "read_claude()"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\agent_state.py",
       "source_location": "L47",
       "id": "agent_state_codex_active",
-      "community": 6,
+      "community": 7,
       "norm_label": "codex_active()"
     },
     {
@@ -44,7 +44,7 @@
       "file_type": "rationale",
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\agent_state.py",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "read agent status: claude state file + codex inbox snapshots.",
       "id": "agent_state_rationale_1"
     },
@@ -54,7 +54,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_legion_commands_py",
-      "community": 4,
+      "community": 3,
       "norm_label": "commands.py"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L15",
       "id": "commands_commandresult",
-      "community": 4,
+      "community": 3,
       "norm_label": "commandresult"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L20",
       "id": "commands_drop_packet",
-      "community": 4,
+      "community": 3,
       "norm_label": "drop_packet()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L37",
       "id": "commands_open_claude_md",
-      "community": 4,
+      "community": 3,
       "norm_label": "open_claude_md()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L50",
       "id": "commands_git_push",
-      "community": 4,
+      "community": 3,
       "norm_label": "git_push()"
     },
     {
@@ -98,7 +98,7 @@
       "file_type": "rationale",
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\commands.py",
       "source_location": "L1",
-      "community": 4,
+      "community": 3,
       "norm_label": "v1 command-bar actions. local only \u2014 no network beyond plain git push.",
       "id": "commands_rationale_1"
     },
@@ -166,6 +166,78 @@
       "id": "config_rationale_1"
     },
     {
+      "label": "monday_preflight.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L1",
+      "id": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "community": 6,
+      "norm_label": "monday_preflight.py"
+    },
+    {
+      "label": "MondayPreflight",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L16",
+      "id": "monday_preflight_mondaypreflight",
+      "community": 6,
+      "norm_label": "mondaypreflight"
+    },
+    {
+      "label": "preflight_path()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L24",
+      "id": "monday_preflight_preflight_path",
+      "community": 6,
+      "norm_label": "preflight_path()"
+    },
+    {
+      "label": "record_monday_preflight()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L28",
+      "id": "monday_preflight_record_monday_preflight",
+      "community": 6,
+      "norm_label": "record_monday_preflight()"
+    },
+    {
+      "label": "load_monday_preflight()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L35",
+      "id": "monday_preflight_load_monday_preflight",
+      "community": 6,
+      "norm_label": "load_monday_preflight()"
+    },
+    {
+      "label": "_render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L63",
+      "id": "monday_preflight_render",
+      "community": 6,
+      "norm_label": "_render()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L74",
+      "id": "monday_preflight_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Durable Monday MCP write-access preflight records.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L1",
+      "id": "monday_preflight_rationale_1",
+      "community": 6,
+      "norm_label": "durable monday mcp write-access preflight records."
+    },
+    {
       "label": "ndjson_tail.py",
       "file_type": "code",
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\ndjson_tail.py",
@@ -216,7 +288,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_legion_nerve_center_py",
-      "community": 3,
+      "community": 4,
       "norm_label": "nerve_center.py"
     },
     {
@@ -225,7 +297,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L27",
       "id": "nerve_center_read_key_nonblocking",
-      "community": 3,
+      "community": 4,
       "norm_label": "_read_key_nonblocking()"
     },
     {
@@ -234,7 +306,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L37",
       "id": "nerve_center_repo_grid",
-      "community": 3,
+      "community": 4,
       "norm_label": "_repo_grid()"
     },
     {
@@ -243,7 +315,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L65",
       "id": "nerve_center_feed_panel",
-      "community": 3,
+      "community": 4,
       "norm_label": "_feed_panel()"
     },
     {
@@ -252,7 +324,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L80",
       "id": "nerve_center_agent_panel",
-      "community": 3,
+      "community": 4,
       "norm_label": "_agent_panel()"
     },
     {
@@ -261,7 +333,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L103",
       "id": "nerve_center_command_panel",
-      "community": 3,
+      "community": 4,
       "norm_label": "_command_panel()"
     },
     {
@@ -270,7 +342,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L111",
       "id": "nerve_center_build_layout",
-      "community": 3,
+      "community": 4,
       "norm_label": "build_layout()"
     },
     {
@@ -279,7 +351,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L120",
       "id": "nerve_center_scan_all",
-      "community": 3,
+      "community": 4,
       "norm_label": "_scan_all()"
     },
     {
@@ -288,7 +360,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L129",
       "id": "nerve_center_prompt",
-      "community": 3,
+      "community": 4,
       "norm_label": "_prompt()"
     },
     {
@@ -297,7 +369,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L137",
       "id": "nerve_center_pick_repo",
-      "community": 3,
+      "community": 4,
       "norm_label": "_pick_repo()"
     },
     {
@@ -306,7 +378,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\nerve_center.py",
       "source_location": "L148",
       "id": "nerve_center_main",
-      "community": 3,
+      "community": 4,
       "norm_label": "main()"
     },
     {
@@ -396,7 +468,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\__init__.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_legion_init_py",
-      "community": 7,
+      "community": 8,
       "norm_label": "__init__.py"
     },
     {
@@ -404,7 +476,7 @@
       "file_type": "rationale",
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\__init__.py",
       "source_location": "L1",
-      "community": 7,
+      "community": 8,
       "norm_label": "legion nerve center - cross-repo live tui dashboard. v1 read-only.",
       "id": "init_rationale_1"
     },
@@ -414,7 +486,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\__main__.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_legion_main_py",
-      "community": 9,
+      "community": 10,
       "norm_label": "__main__.py"
     },
     {
@@ -423,7 +495,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\mcp\\google-chat\\src\\index.ts",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_mcp_google_chat_src_index_ts",
-      "community": 10,
+      "community": 11,
       "norm_label": "index.ts"
     },
     {
@@ -612,7 +684,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\claude-dialogue-log.ps1",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_scripts_claude_dialogue_log_ps1",
-      "community": 11,
+      "community": 12,
       "norm_label": "claude-dialogue-log.ps1"
     },
     {
@@ -621,7 +693,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\codex-dialogue-check.ps1",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_scripts_codex_dialogue_check_ps1",
-      "community": 12,
+      "community": 13,
       "norm_label": "codex-dialogue-check.ps1"
     },
     {
@@ -630,7 +702,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\codex-handoff.ps1",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_scripts_codex_handoff_ps1",
-      "community": 13,
+      "community": 14,
       "norm_label": "codex-handoff.ps1"
     },
     {
@@ -639,7 +711,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\codex-watchdog-check.ps1",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_scripts_codex_watchdog_check_ps1",
-      "community": 14,
+      "community": 15,
       "norm_label": "codex-watchdog-check.ps1"
     },
     {
@@ -648,7 +720,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\sync-vault-hard-truths.ps1",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_scripts_sync_vault_hard_truths_ps1",
-      "community": 8,
+      "community": 9,
       "norm_label": "sync-vault-hard-truths.ps1"
     },
     {
@@ -657,7 +729,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\scripts\\sync-vault-hard-truths.ps1",
       "source_location": "L13",
       "id": "sync_vault_hard_truths_sync_file",
-      "community": 8,
+      "community": 9,
       "norm_label": "sync-file()"
     },
     {
@@ -666,7 +738,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_agent_state.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_tests_test_legion_agent_state_py",
-      "community": 6,
+      "community": 7,
       "norm_label": "test_legion_agent_state.py"
     },
     {
@@ -675,7 +747,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_agent_state.py",
       "source_location": "L8",
       "id": "test_legion_agent_state_test_read_claude_missing_returns_empty",
-      "community": 6,
+      "community": 7,
       "norm_label": "test_read_claude_missing_returns_empty()"
     },
     {
@@ -684,7 +756,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_agent_state.py",
       "source_location": "L13",
       "id": "test_legion_agent_state_test_read_claude_fresh",
-      "community": 6,
+      "community": 7,
       "norm_label": "test_read_claude_fresh()"
     },
     {
@@ -693,7 +765,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_agent_state.py",
       "source_location": "L26",
       "id": "test_legion_agent_state_test_read_claude_stale",
-      "community": 6,
+      "community": 7,
       "norm_label": "test_read_claude_stale()"
     },
     {
@@ -702,7 +774,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_agent_state.py",
       "source_location": "L34",
       "id": "test_legion_agent_state_test_codex_active_lists_inbox",
-      "community": 6,
+      "community": 7,
       "norm_label": "test_codex_active_lists_inbox()"
     },
     {
@@ -711,7 +783,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_tests_test_legion_commands_py",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_legion_commands.py"
     },
     {
@@ -720,7 +792,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L7",
       "id": "test_legion_commands_init_repo",
-      "community": 4,
+      "community": 3,
       "norm_label": "_init_repo()"
     },
     {
@@ -729,7 +801,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L13",
       "id": "test_legion_commands_test_drop_packet_writes_file",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_drop_packet_writes_file()"
     },
     {
@@ -738,7 +810,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L21",
       "id": "test_legion_commands_test_drop_packet_rejects_bad_id",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_drop_packet_rejects_bad_id()"
     },
     {
@@ -747,7 +819,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L28",
       "id": "test_legion_commands_test_drop_packet_no_inbox",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_drop_packet_no_inbox()"
     },
     {
@@ -756,7 +828,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L35",
       "id": "test_legion_commands_test_drop_packet_refuses_overwrite",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_drop_packet_refuses_overwrite()"
     },
     {
@@ -765,7 +837,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L44",
       "id": "test_legion_commands_test_open_claude_md_missing",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_open_claude_md_missing()"
     },
     {
@@ -774,7 +846,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_commands.py",
       "source_location": "L50",
       "id": "test_legion_commands_test_git_push_no_remote",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_git_push_no_remote()"
     },
     {
@@ -909,7 +981,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_nerve_center_smoke.py",
       "source_location": "L1",
       "id": "c_users_orishavit_documents_github_legion_swarm_tests_test_legion_nerve_center_smoke_py",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_legion_nerve_center_smoke.py"
     },
     {
@@ -918,7 +990,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_nerve_center_smoke.py",
       "source_location": "L4",
       "id": "test_legion_nerve_center_smoke_test_module_imports",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_module_imports()"
     },
     {
@@ -927,7 +999,7 @@
       "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_legion_nerve_center_smoke.py",
       "source_location": "L10",
       "id": "test_legion_nerve_center_smoke_test_build_layout_returns_layout",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_build_layout_returns_layout()"
     },
     {
@@ -1019,6 +1091,42 @@
       "id": "test_legion_repo_scan_test_last_commit_age_format",
       "community": 1,
       "norm_label": "test_last_commit_age_format()"
+    },
+    {
+      "label": "test_monday_preflight.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L1",
+      "id": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "community": 6,
+      "norm_label": "test_monday_preflight.py"
+    },
+    {
+      "label": "test_record_monday_preflight_writes_durable_missing_status()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L12",
+      "id": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "community": 6,
+      "norm_label": "test_record_monday_preflight_writes_durable_missing_status()"
+    },
+    {
+      "label": "test_load_monday_preflight_round_trips_status()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L33",
+      "id": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "community": 6,
+      "norm_label": "test_load_monday_preflight_round_trips_status()"
+    },
+    {
+      "label": "test_load_monday_preflight_returns_none_when_missing()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L57",
+      "id": "test_monday_preflight_test_load_monday_preflight_returns_none_when_missing",
+      "community": 6,
+      "norm_label": "test_load_monday_preflight_returns_none_when_missing()"
     }
   ],
   "links": [
@@ -1561,6 +1669,246 @@
       "_tgt": "test_legion_config_test_missing_repo_path_recorded",
       "source": "config_load_config",
       "target": "test_legion_config_test_missing_repo_path_recorded"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_mondaypreflight",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_mondaypreflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_preflight_path",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_preflight_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_record_monday_preflight",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_record_monday_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_load_monday_preflight",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_load_monday_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_render",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "_tgt": "monday_preflight_main",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "monday_preflight_rationale_1",
+      "_tgt": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "source": "c_users_orishavit_documents_github_legion_swarm_legion_monday_preflight_py",
+      "target": "monday_preflight_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_src": "monday_preflight_load_monday_preflight",
+      "_tgt": "monday_preflight_mondaypreflight",
+      "source": "monday_preflight_mondaypreflight",
+      "target": "monday_preflight_load_monday_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_src": "monday_preflight_main",
+      "_tgt": "monday_preflight_mondaypreflight",
+      "source": "monday_preflight_mondaypreflight",
+      "target": "monday_preflight_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "_tgt": "monday_preflight_mondaypreflight",
+      "source": "monday_preflight_mondaypreflight",
+      "target": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "_tgt": "monday_preflight_mondaypreflight",
+      "source": "monday_preflight_mondaypreflight",
+      "target": "test_monday_preflight_test_load_monday_preflight_round_trips_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "monday_preflight_record_monday_preflight",
+      "_tgt": "monday_preflight_preflight_path",
+      "source": "monday_preflight_preflight_path",
+      "target": "monday_preflight_record_monday_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "monday_preflight_load_monday_preflight",
+      "_tgt": "monday_preflight_preflight_path",
+      "source": "monday_preflight_preflight_path",
+      "target": "monday_preflight_load_monday_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "_tgt": "monday_preflight_preflight_path",
+      "source": "monday_preflight_preflight_path",
+      "target": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "monday_preflight_record_monday_preflight",
+      "_tgt": "monday_preflight_render",
+      "source": "monday_preflight_record_monday_preflight",
+      "target": "monday_preflight_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\legion\\monday_preflight.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_src": "monday_preflight_main",
+      "_tgt": "monday_preflight_record_monday_preflight",
+      "source": "monday_preflight_record_monday_preflight",
+      "target": "monday_preflight_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "_tgt": "monday_preflight_record_monday_preflight",
+      "source": "monday_preflight_record_monday_preflight",
+      "target": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "_tgt": "monday_preflight_record_monday_preflight",
+      "source": "monday_preflight_record_monday_preflight",
+      "target": "test_monday_preflight_test_load_monday_preflight_round_trips_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "_tgt": "monday_preflight_load_monday_preflight",
+      "source": "monday_preflight_load_monday_preflight",
+      "target": "test_monday_preflight_test_load_monday_preflight_round_trips_status"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "test_monday_preflight_test_load_monday_preflight_returns_none_when_missing",
+      "_tgt": "monday_preflight_load_monday_preflight",
+      "source": "monday_preflight_load_monday_preflight",
+      "target": "test_monday_preflight_test_load_monday_preflight_returns_none_when_missing"
     },
     {
       "relation": "contains",
@@ -3348,6 +3696,42 @@
       "_tgt": "test_legion_repo_scan_init_repo",
       "source": "test_legion_repo_scan_init_repo",
       "target": "test_legion_repo_scan_test_last_commit_age_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "_tgt": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "source": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "target": "test_monday_preflight_test_record_monday_preflight_writes_durable_missing_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "_tgt": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "source": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "target": "test_monday_preflight_test_load_monday_preflight_round_trips_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\OriShavit\\Documents\\GitHub\\legion-swarm\\tests\\test_monday_preflight.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_src": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "_tgt": "test_monday_preflight_test_load_monday_preflight_returns_none_when_missing",
+      "source": "c_users_orishavit_documents_github_legion_swarm_tests_test_monday_preflight_py",
+      "target": "test_monday_preflight_test_load_monday_preflight_returns_none_when_missing",
       "confidence_score": 1.0
     }
   ],

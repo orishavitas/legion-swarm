@@ -8,7 +8,7 @@
 
 ## Active
 
-- [ ] Add durable Monday MCP availability check to Legion dispatch preflight so missing board write access is recorded before dispatch.
+- [x] Add durable Monday MCP availability check to Legion dispatch preflight so missing board write access is recorded before dispatch.
 
 ## Next
 

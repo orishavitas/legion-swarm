@@ -295,3 +295,34 @@ Verification / Tests:
 
 Matching Repo Update Status:
 - Complete locally: script fix committed to `legion-swarm`. Project Nexus has no contract change; Nexus tracker awareness added in Nexus pass.
+
+## Entry 10 - Monday MCP Dispatch Preflight Evidence
+
+Date: 2026-05-18
+
+Change:
+- Added `legion/monday_preflight.py` to write and load `.codex/state/MONDAY_MCP_PREFLIGHT.md`.
+- Updated Legion dispatch rules so Monday write-access evidence is recorded before `launch_agent`.
+- Updated the ownership map to name the preflight artifact owner.
+
+Concept:
+- Missing Monday board write access must be durable before dispatch, not discovered after an agent is already running.
+- The Launcher MCP still does not call Monday directly; Claude/Legion owns Monday writes and records the preflight evidence.
+
+Implementation:
+- `python -m legion.monday_preflight --repo legion-swarm --board-id 18408420731 --status available|missing --evidence "<text>"` writes the preflight record.
+- `meta/CLAUDE.md` now requires a missing-access record and no dispatch when Monday write tools are unavailable.
+
+Methodology Impact:
+- Legion dispatch now has a local audit artifact for Monday MCP availability.
+- Nexus packet closure is unchanged: Project Nexus monitor remains the only writer for Nexus packet Monday closure.
+
+Failures / Blockers:
+- Pytest default temp paths hit workstation ACL denial; verification used a repo-local `--basetemp`.
+
+Verification / Tests:
+- Red test first: `python -m pytest tests/test_monday_preflight.py -v` failed because `legion.monday_preflight` did not exist.
+- Green test: `python -m pytest tests/test_monday_preflight.py -v -p no:cacheprovider --basetemp .\tmp-pytest` passed 3/3.
+
+Matching Repo Update Status:
+- No Project Nexus contract update required because Nexus monitor behavior, packet closure, and Monday ownership are unchanged.

@@ -44,6 +44,7 @@ For Legion/Nexus changes, also update this repo's `docs/tracking/2026-05-06-legi
 | `.codex/state/LAST_RUN.md` | **Codex** | `agents/codex.md` §Step 9 completion signal |
 | `.codex/state/HANDOFF_[ts].md` | **Codex** (via `scripts/codex-handoff.ps1`) | `scripts/codex-handoff.ps1` |
 | `.codex/state/MONDAY_UPDATE.md` | **Codex** (via `scripts/codex-handoff.ps1`) | `agents/codex.md` §Monday Update Writing Guide |
+| `.codex/state/MONDAY_MCP_PREFLIGHT.md` | **Claude/Legion** before dispatch; Codex may generate local evidence when asked | `meta/CLAUDE.md` Agent Dispatch Rules; `legion/monday_preflight.py` |
 | `.codex/state/DIALOGUE.md` | **Both Claude and Codex** (append-only, TURN-gated) | `docs/dialogue-format.md` |
 | `.codex/state/TURN.md` | **Writer of each message sets TURN to the other party** | `docs/dialogue-format.md` §TURN.md Protocol |
 | Sprint file task status (`pending → in_progress → done/blocked`) | **Codex** | `agents/codex.md` Steps 6 + 9 |
